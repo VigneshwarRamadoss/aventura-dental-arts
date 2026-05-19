@@ -46,7 +46,7 @@ export interface TeamMember {
 export interface GalleryItem {
   id: string;
   title: string;
-  treatmentType: 'veneers' | 'whitening' | 'invisalign' | 'implants' | 'restorative' | 'general';
+  treatmentType: 'veneers' | 'whitening' | 'invisalign' | 'implants' | 'restorative' | 'general' | 'cosmetic';
   treatmentLabel: string;
   beforeImage: string;
   afterImage: string;
