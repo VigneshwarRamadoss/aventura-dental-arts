@@ -38,12 +38,12 @@ export default function Home() {
           />
         </div>
 
-        <div className="relative z-20 flex flex-col items-center text-center px-4 max-w-4xl mx-auto mt-16">
+        <div className="relative z-20 flex flex-col items-center text-center px-4 max-w-5xl mx-auto mt-20">
           <motion.span 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1, duration: 0.4 }}
-            className="font-sans text-sm text-bronze tracking-[0.1em] uppercase mb-8"
+            className="font-sans text-sm md:text-base text-bronze tracking-[0.18em] uppercase mb-6 font-semibold"
           >
             Aventura, Florida
           </motion.span>
@@ -52,7 +52,7 @@ export default function Home() {
             initial={{ y: 30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2, duration: 0.6, ease: "easeOut" }}
-            className="font-serif text-[83px] md:text-[120px] lg:text-[153px] leading-[0.8] tracking-tight text-light-beige mb-8"
+            className="font-serif text-6xl md:text-8xl lg:text-[108px] xl:text-[120px] leading-[0.92] md:leading-[0.88] xl:leading-[0.85] tracking-tight text-light-beige mb-8"
           >
             Artistry in <br /> Dentistry.
           </motion.h1>
@@ -61,14 +61,14 @@ export default function Home() {
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
             transition={{ delay: 0.5, duration: 0.4 }}
-            className="w-[60px] h-px bg-bronze mb-8 origin-center"
+            className="w-[80px] h-[2px] bg-bronze mb-8 origin-center"
           />
 
           <motion.p 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.4 }}
-            className="font-sans text-light-beige/80 max-w-xl text-base md:text-lg mb-12"
+            className="font-sans text-off-white/90 max-w-2xl text-lg md:text-xl lg:text-2xl leading-relaxed mb-12"
           >
             Experience a new standard of dental care. Restrained luxury meets clinical excellence to craft your perfect smile.
           </motion.p>
