@@ -50,18 +50,18 @@ export default function Navigation() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-10">
           {links.map((link) => (
             <Link
               key={link.name}
               to={link.href}
-              className="text-base font-serif text-light-beige hover:text-white relative group"
+              className="text-lg font-serif text-light-beige hover:text-white font-medium relative group transition-colors"
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-bronze transition-all group-hover:w-full" />
+              <span className="absolute -bottom-1.5 left-0 w-0 h-0.5 bg-bronze transition-all group-hover:w-full" />
             </Link>
           ))}
-          <Button as={Link} to="/contact" variant="primary">
+          <Button as={Link} to="/contact" variant="primary" className="text-base md:text-lg font-serif px-8 py-3.5 tracking-wide">
             Book Appointment
           </Button>
         </nav>
