@@ -1,0 +1,6 @@
+{
+  "name": "Aventura Dental Arts",
+  "description": "Premium Dental Website for Aventura Dental Arts, featuring beautiful UI, routing, and animated components.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
