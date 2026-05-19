@@ -267,12 +267,12 @@ export default function Contact() {
 
           {/* Right Column: Appointment Form (lg:col-span-7) */}
           <div className="lg:col-span-7">
-            <div className="bg-[#20232B] border border-dark-gray/30 p-8 md:p-12 relative shadow-card">
+            <div className="bg-[#14151D] border border-dark-gray/25 p-6 md:p-12 relative shadow-2xl max-w-[640px] mx-auto lg:ml-auto">
               
-              <div className="flex justify-between items-start mb-8 border-b border-dark-gray/15 pb-6">
+              <div className="flex justify-between items-start mb-10 border-b border-dark-gray/15 pb-6">
                 <div>
-                  <h3 className="font-serif text-2xl md:text-3xl text-light-beige">Request Consultation</h3>
-                  <p className="font-sans text-xs text-[#DAD5D3]/60 mt-1">
+                  <h3 className="font-serif text-3xl text-light-beige">Request Consultation</h3>
+                  <p className="font-sans text-xs text-dark-gray mt-2">
                     Complete this secure intake sheet. Our Patient Experience team will reach out directly.
                   </p>
                 </div>
@@ -281,12 +281,12 @@ export default function Contact() {
                 </div>
               </div>
 
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-8">
                 
                 {/* Name Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="space-y-1">
-                    <label className="block font-sans text-xs uppercase tracking-wider text-[#DAD5D3]/80" htmlFor="firstName">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="space-y-1 relative">
+                    <label className="block font-sans text-sm uppercase tracking-[0.05em] text-dark-gray font-semibold" htmlFor="firstName">
                       First Name *
                     </label>
                     <input 
@@ -295,15 +295,16 @@ export default function Contact() {
                       name="firstName"
                       value={form.firstName}
                       onChange={handleChange}
-                      className={`w-full bg-charcoal border text-sm text-light-beige px-4 py-3 rounded focus:outline-none focus:border-bronze transition-colors ${
-                        errors.firstName ? 'border-error' : 'border-dark-gray/40'
+                      placeholder="Enter your first name"
+                      className={`w-full bg-transparent border-b border-t-0 border-l-0 border-r-0 text-base font-sans text-light-beige h-16 px-0 pb-2 focus:ring-0 focus:outline-none focus:border-light-beige placeholder:text-dark-gray/40 transition-colors ${
+                        errors.firstName ? 'border-error' : 'border-dark-gray/60'
                       }`}
                     />
-                    {errors.firstName && <p className="text-xs text-error">{errors.firstName}</p>}
+                    {errors.firstName && <p className="text-xs text-error mt-1">{errors.firstName}</p>}
                   </div>
 
-                  <div className="space-y-1">
-                    <label className="block font-sans text-xs uppercase tracking-wider text-[#DAD5D3]/80" htmlFor="lastName">
+                  <div className="space-y-1 relative">
+                    <label className="block font-sans text-sm uppercase tracking-[0.05em] text-dark-gray font-semibold" htmlFor="lastName">
                       Last Name *
                     </label>
                     <input 
@@ -312,18 +313,19 @@ export default function Contact() {
                       name="lastName"
                       value={form.lastName}
                       onChange={handleChange}
-                      className={`w-full bg-charcoal border text-sm text-light-beige px-4 py-3 rounded focus:outline-none focus:border-bronze transition-colors ${
-                        errors.lastName ? 'border-error' : 'border-dark-gray/40'
+                      placeholder="Enter your last name"
+                      className={`w-full bg-transparent border-b border-t-0 border-l-0 border-r-0 text-base font-sans text-light-beige h-16 px-0 pb-2 focus:ring-0 focus:outline-none focus:border-light-beige placeholder:text-dark-gray/40 transition-colors ${
+                        errors.lastName ? 'border-error' : 'border-dark-gray/60'
                       }`}
                     />
-                    {errors.lastName && <p className="text-xs text-error">{errors.lastName}</p>}
+                    {errors.lastName && <p className="text-xs text-error mt-1">{errors.lastName}</p>}
                   </div>
                 </div>
 
                 {/* Email & Phone Row */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="space-y-1">
-                    <label className="block font-sans text-xs uppercase tracking-wider text-[#DAD5D3]/80" htmlFor="email">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="space-y-1 relative">
+                    <label className="block font-sans text-sm uppercase tracking-[0.05em] text-dark-gray font-semibold" htmlFor="email">
                       Email Address *
                     </label>
                     <input 
@@ -332,16 +334,16 @@ export default function Contact() {
                       name="email"
                       value={form.email}
                       onChange={handleChange}
-                      placeholder="e.g. name@example.com"
-                      className={`w-full bg-charcoal border text-sm text-light-beige px-4 py-3 rounded focus:outline-none focus:border-bronze transition-colors ${
-                        errors.email ? 'border-error' : 'border-dark-gray/40'
+                      placeholder="name@example.com"
+                      className={`w-full bg-transparent border-b border-t-0 border-l-0 border-r-0 text-base font-sans text-light-beige h-16 px-0 pb-2 focus:ring-0 focus:outline-none focus:border-light-beige placeholder:text-dark-gray/40 transition-colors ${
+                        errors.email ? 'border-error' : 'border-dark-gray/60'
                       }`}
                     />
-                    {errors.email && <p className="text-xs text-error">{errors.email}</p>}
+                    {errors.email && <p className="text-xs text-error mt-1">{errors.email}</p>}
                   </div>
 
-                  <div className="space-y-1">
-                    <label className="block font-sans text-xs uppercase tracking-wider text-[#DAD5D3]/80" htmlFor="phone">
+                  <div className="space-y-1 relative">
+                    <label className="block font-sans text-sm uppercase tracking-[0.05em] text-dark-gray font-semibold" htmlFor="phone">
                       Phone Number *
                     </label>
                     <input 
@@ -350,18 +352,18 @@ export default function Contact() {
                       name="phone"
                       value={form.phone}
                       onChange={handleChange}
-                      placeholder="e.g. (305) 555-0128"
-                      className={`w-full bg-charcoal border text-sm text-light-beige px-4 py-3 rounded focus:outline-none focus:border-bronze transition-colors ${
-                        errors.phone ? 'border-error' : 'border-dark-gray/40'
+                      placeholder="(305) 555-0128"
+                      className={`w-full bg-transparent border-b border-t-0 border-l-0 border-r-0 text-base font-sans text-light-beige h-16 px-0 pb-2 focus:ring-0 focus:outline-none focus:border-light-beige placeholder:text-dark-gray/40 transition-colors ${
+                        errors.phone ? 'border-error' : 'border-dark-gray/60'
                       }`}
                     />
-                    {errors.phone && <p className="text-xs text-error">{errors.phone}</p>}
+                    {errors.phone && <p className="text-xs text-error mt-1">{errors.phone}</p>}
                   </div>
                 </div>
 
                 {/* Service Interest dropdown */}
-                <div className="space-y-1">
-                  <label className="block font-sans text-xs uppercase tracking-wider text-[#DAD5D3]/80" htmlFor="service">
+                <div className="space-y-1 relative">
+                  <label className="block font-sans text-sm uppercase tracking-[0.05em] text-dark-gray font-semibold" htmlFor="service">
                     Service Interest *
                   </label>
                   <select 
@@ -369,22 +371,22 @@ export default function Contact() {
                     name="service"
                     value={form.service}
                     onChange={handleChange}
-                    className={`w-full bg-charcoal border text-sm text-light-beige px-4 py-3 rounded focus:outline-none focus:border-bronze transition-colors ${
-                      errors.service ? 'border-error' : 'border-dark-gray/40'
+                    className={`w-full bg-transparent border-b border-t-0 border-l-0 border-r-0 text-base font-sans text-light-beige h-16 px-0 pb-2 focus:ring-0 focus:outline-none focus:border-light-beige transition-colors appearance-none cursor-pointer ${
+                      errors.service ? 'border-error' : 'border-dark-gray/60'
                     }`}
                   >
-                    <option value="">Select treatment category...</option>
+                    <option value="" className="bg-charcoal text-dark-gray">Select treatment category...</option>
                     {servicesData.map(s => (
-                      <option key={s.id} value={s.slug}>{s.title}</option>
+                      <option key={s.id} value={s.slug} className="bg-charcoal text-light-beige">{s.title}</option>
                     ))}
                   </select>
-                  {errors.service && <p className="text-xs text-error">{errors.service}</p>}
+                  {errors.service && <p className="text-xs text-error mt-1">{errors.service}</p>}
                 </div>
 
                 {/* Preferred Date & Time slot */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div className="space-y-1">
-                    <label className="block font-sans text-xs uppercase tracking-wider text-[#DAD5D3]/80" htmlFor="preferredDate">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                  <div className="space-y-1 relative">
+                    <label className="block font-sans text-sm uppercase tracking-[0.05em] text-dark-gray font-semibold" htmlFor="preferredDate">
                       Preferred Date *
                     </label>
                     <input 
@@ -393,15 +395,15 @@ export default function Contact() {
                       name="preferredDate"
                       value={form.preferredDate}
                       onChange={handleChange}
-                      className={`w-full bg-charcoal border text-sm text-light-beige px-4 py-3 rounded focus:outline-none focus:border-bronze transition-colors ${
-                        errors.preferredDate ? 'border-error' : 'border-dark-gray/40'
+                      className={`w-full bg-transparent border-b border-t-0 border-l-0 border-r-0 text-base font-sans text-light-beige h-16 px-0 pb-2 focus:ring-0 focus:outline-none focus:border-light-beige transition-colors ${
+                        errors.preferredDate ? 'border-error' : 'border-dark-gray/60'
                       }`}
                     />
-                    {errors.preferredDate && <p className="text-xs text-error">{errors.preferredDate}</p>}
+                    {errors.preferredDate && <p className="text-xs text-error mt-1">{errors.preferredDate}</p>}
                   </div>
 
-                  <div className="space-y-1">
-                    <label className="block font-sans text-xs uppercase tracking-wider text-[#DAD5D3]/80" htmlFor="preferredTime">
+                  <div className="space-y-1 relative">
+                    <label className="block font-sans text-sm uppercase tracking-[0.05em] text-dark-gray font-semibold" htmlFor="preferredTime">
                       Preferred Time of Day *
                     </label>
                     <select 
@@ -409,22 +411,22 @@ export default function Contact() {
                       name="preferredTime"
                       value={form.preferredTime}
                       onChange={handleChange}
-                      className={`w-full bg-charcoal border text-sm text-light-beige px-4 py-3 rounded focus:outline-none focus:border-bronze transition-colors ${
-                        errors.preferredTime ? 'border-error' : 'border-dark-gray/40'
+                      className={`w-full bg-transparent border-b border-t-0 border-l-0 border-r-0 text-base font-sans text-light-beige h-16 px-0 pb-2 focus:ring-0 focus:outline-none focus:border-light-beige transition-colors appearance-none cursor-pointer ${
+                        errors.preferredTime ? 'border-error' : 'border-dark-gray/60'
                       }`}
                     >
-                      <option value="">Select slot preference...</option>
-                      <option value="Morning">Morning (8:00 AM - 12:00 PM)</option>
-                      <option value="Afternoon">Afternoon (12:00 PM - 4:00 PM)</option>
-                      <option value="Evening">Late Session (4:00 PM - 5:00 PM)</option>
+                      <option value="" className="bg-charcoal text-dark-gray">Select slot preference...</option>
+                      <option value="Morning" className="bg-charcoal text-light-beige">Morning (8:00 AM - 12:00 PM)</option>
+                      <option value="Afternoon" className="bg-charcoal text-light-beige">Afternoon (12:00 PM - 4:00 PM)</option>
+                      <option value="Evening" className="bg-charcoal text-light-beige">Late Session (4:00 PM - 5:00 PM)</option>
                     </select>
-                    {errors.preferredTime && <p className="text-xs text-error">{errors.preferredTime}</p>}
+                    {errors.preferredTime && <p className="text-xs text-error mt-1">{errors.preferredTime}</p>}
                   </div>
                 </div>
 
                 {/* Optional Insurance Provider input */}
-                <div className="space-y-1">
-                  <label className="block font-sans text-xs uppercase tracking-wider text-[#DAD5D3]/80" htmlFor="insurance">
+                <div className="space-y-1 relative">
+                  <label className="block font-sans text-sm uppercase tracking-[0.05em] text-dark-gray font-semibold" htmlFor="insurance">
                     Insurance Provider (Optional)
                   </label>
                   <input 
@@ -434,13 +436,13 @@ export default function Contact() {
                     value={form.insurance}
                     onChange={handleChange}
                     placeholder="e.g. Delta Dental PPO"
-                    className="w-full bg-charcoal border border-dark-gray/40 text-sm text-light-beige px-4 py-3 rounded focus:outline-none focus:border-bronze transition-colors"
+                    className="w-full bg-transparent border-b border-t-0 border-l-0 border-r-0 text-base font-sans text-light-beige h-16 px-0 pb-2 focus:ring-0 focus:outline-none focus:border-light-beige placeholder:text-dark-gray/40 transition-colors border-dark-gray/60"
                   />
                 </div>
 
                 {/* Notes/Comments Textarea */}
-                <div className="space-y-1">
-                  <label className="block font-sans text-xs uppercase tracking-wider text-[#DAD5D3]/80" htmlFor="notes">
+                <div className="space-y-1 relative">
+                  <label className="block font-sans text-sm uppercase tracking-[0.05em] text-dark-gray font-semibold" htmlFor="notes">
                     Personal Health / Aesthetic Goals (Optional)
                   </label>
                   <textarea 
@@ -450,32 +452,32 @@ export default function Contact() {
                     onChange={handleChange}
                     rows={4}
                     placeholder="Tell us about your smile goals or any special comfort requests..."
-                    className="w-full bg-charcoal border border-dark-gray/40 text-sm text-light-beige px-4 py-3 rounded focus:outline-none focus:border-bronze transition-colors resize-none"
+                    className="w-full bg-transparent border-b border-t-0 border-l-0 border-r-0 text-base font-sans text-light-beige px-0 pb-2 focus:ring-0 focus:outline-none focus:border-light-beige placeholder:text-dark-gray/40 transition-colors border-dark-gray/60 resize-none pt-4"
                   />
                 </div>
 
                 {/* HIPAA Consent Checkbox */}
-                <div className="space-y-1">
-                  <label className="flex items-start gap-3 cursor-pointer select-none">
+                <div className="space-y-2 pt-2">
+                  <label className="flex items-start gap-4 cursor-pointer select-none">
                     <input 
                       type="checkbox" 
                       name="hipaaConsent"
                       checked={form.hipaaConsent}
                       onChange={handleChange}
-                      className="mt-1 h-4.5 w-4.5 border border-dark-gray text-bronze focus:ring-0 focus:ring-offset-0 bg-charcoal rounded cursor-pointer"
+                      className="mt-1 h-5 w-5 border border-dark-gray/60 text-bronze focus:ring-0 focus:ring-offset-0 bg-transparent rounded-none cursor-pointer checked:bg-bronze checked:border-bronze transition-colors"
                     />
-                    <span className="font-sans text-xs text-[#DAD5D3]/75 leading-normal">
+                    <span className="font-sans text-xs text-dark-gray leading-relaxed">
                       I authorize the transmission of my contact and scheduling metadata. I understand this information is protected securely under digital privacy guidelines. *
                     </span>
                   </label>
-                  {errors.hipaaConsent && <p className="text-xs text-error pt-1">{errors.hipaaConsent}</p>}
+                  {errors.hipaaConsent && <p className="text-xs text-error">{errors.hipaaConsent}</p>}
                 </div>
 
                 {/* Submit button */}
                 <div className="pt-4">
                   <Button 
                     type="submit" 
-                    className="w-full justify-center h-12"
+                    className="w-full justify-center h-14 rounded-full font-serif text-lg tracking-wider"
                     loading={isSubmitting}
                   >
                     Submit Booking Request
