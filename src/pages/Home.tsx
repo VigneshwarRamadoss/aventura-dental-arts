@@ -2,6 +2,7 @@ import { motion } from 'motion/react';
 import Button from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 import { Calendar, Phone, ArrowRight, ShieldCheck, Star } from 'lucide-react';
+import dentalDoc from './hero_section/dentaldoc 1.png';
 
 export default function Home() {
   const services = [
@@ -22,11 +23,18 @@ export default function Home() {
       {/* 1. HERO SECTION */}
       <section className="relative h-[100svh] w-full flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-[#0E0F15]/70 to-[#0E0F15]/90 z-10" />
-          <img 
-            src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=2000&auto=format&fit=crop" 
-            alt="Premium Dental Practice" 
-            className="w-full h-full object-cover object-center"
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0E0F15]/40 via-[#0E0F15]/75 to-[#0E0F15] z-10" />
+          <motion.img 
+            initial={{ scale: 1.15, opacity: 0 }}
+            animate={{ scale: 1.05, opacity: 1 }}
+            transition={{ duration: 2.2, ease: "easeOut" }}
+            src={dentalDoc} 
+            alt="Aventura Dental Arts Practice" 
+            className="fixed top-0 left-0 w-full h-screen object-cover object-center pointer-events-none"
+            style={{ 
+              willChange: 'transform',
+              filter: 'brightness(0.55) contrast(1.1) saturate(0.9)'
+            }}
           />
         </div>
 
