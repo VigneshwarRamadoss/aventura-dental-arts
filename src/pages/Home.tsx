@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import Button from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 import { Calendar, Phone, ArrowRight, ShieldCheck, Star } from 'lucide-react';
-import dentalDoc from './hero_section/dentaldoc 1.png';
+import dentalDoc from './hero_section/luxury-clinic-hero.png';
 import serviceBg from './hero_section/service-bg.png';
 import drAbout from './hero_section/dr-about.png';
 
