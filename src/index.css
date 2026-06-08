@@ -17,12 +17,18 @@
   --color-card-warm: #DAD5D3;
   --color-border-light: #EAE8E8;
 
+  --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.25);
+
   --font-serif: "Instrument Serif", Georgia, serif;
   --font-sans: "Inter Tight", ui-sans-serif, system-ui, sans-serif;
   --font-form: Arial, sans-serif;
   
   --spacing-11: 44px;
   --spacing-18: 72px;
+}
+
+@utility max-w-site {
+  max-width: 1440px;
 }
 
 @layer base {
@@ -34,3 +40,20 @@
     @apply font-serif font-normal;
   }
 }
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-150%) skewX(-15deg);
+  }
+  50% {
+    transform: translateX(150%) skewX(-15deg);
+  }
+  100% {
+    transform: translateX(150%) skewX(-15deg);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 4s infinite ease-in-out;
+}
+

@@ -1,3 +1,7 @@
+import clinicalHeritageDr from '../pages/hero_section/clinical-heritage-dr.png';
+import leadPeriodontalSpecialist from '../Clinical Heritage/Lead Periodontal Specialist.png';
+import patientExperienceDirector from '../Clinical Heritage/Patient Experience Director.png';
+
 export interface FAQItem {
   question: string;
   answer: string;
@@ -37,6 +41,7 @@ export interface TeamMember {
   role: string;
   type: 'doctor' | 'hygienist' | 'admin';
   photo: string;
+  imagePosition?: string;
   shortBio: string;
   fullBio: string[];
   credentials: string[];
@@ -110,7 +115,7 @@ export const servicesData: ServiceItem[] = [
     icon: "✨",
     iconName: "Sparkles",
     shortDescription: "Crafting beautiful, high-contrast, natural-looking smiles through veneers, advanced whitening, and smile makeovers.",
-    heroImage: "https://images.unsplash.com/photo-1598256989800-fea5a18a9926?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=1200&auto=format&fit=crop",
     overview: "Cosmetic dentistry at Aventura Dental Arts is where restorative science meets visual artistry. Guided by the principle of 'restrained luxury', we design custom smiles that complement your unique facial features, skin tone, and character. We avoid standard artificial designs, focusing instead on texture, opacity, and natural shade variations to create veneers and makeovers that look completely authentic.",
     benefits: [
       { label: "Bespoke Design", iconName: "Palette", description: "Every smile is customized to complement your facial structure, profile, and personality." },
@@ -121,13 +126,13 @@ export const servicesData: ServiceItem[] = [
     process: [
       { stepNumber: 1, title: "Aesthetic Consultation", description: "A detailed visual diagnosis of your smile, utilizing digital scanning, close-up photography, and facial mapping to map your treatment goals." },
       { stepNumber: 2, title: "Digital 3D Smile Design", description: "We create a physical and digital wax-up mockup of your proposed smile. You get to 'test-drive' the look and feel in your mouth before any treatment begins." },
-      { stepNumber: 3, title: "Micro-Preparation & Bonding", description: "Minimal preparation of the enamel, followed by the meticulous bonding of ultra-thin, hand-crafted porcelain shells by Dr. Rostova." },
+      { stepNumber: 3, title: "Micro-Preparation & Bonding", description: "Minimal preparation of the enamel, followed by the meticulous bonding of ultra-thin, hand-crafted porcelain shells by Dr. Vigneshwar." },
       { stepNumber: 4, title: "Aftercare & Final Polish", description: "A final refinement, bite optimization check, and a customized preservation guard to protect your investment for decades." }
     ],
     faq: [
       { question: "How long do porcelain veneers typically last?", answer: "With excellent oral hygiene and regular preventive care, premium porcelain veneers can easily last 15 to 20 years or more. We construct them using elite-grade biocompatible ceramics that resist staining and wear." },
       { question: "Is the porcelain veneer procedure painful?", answer: "Not at all. The procedure is performed under local anesthesia to ensure complete comfort. For minimal-prep or no-prep veneers, the discomfort is practically zero, and recovery is instantaneous." },
-      { question: "Will my custom veneers look artificial or too white?", answer: "Never at Aventura Dental Arts. We specialize in natural aesthetic balance. Dr. Rostova hand-picks multi-layered ceramic shades with appropriate translucent edges to replicate how light passes through natural teeth." },
+      { question: "Will my custom veneers look artificial or too white?", answer: "Never at Aventura Dental Arts. We specialize in natural aesthetic balance. Dr. Vigneshwar hand-picks multi-layered ceramic shades with appropriate translucent edges to replicate how light passes through natural teeth." },
       { question: "Can I eat and drink normally after getting veneers?", answer: "Yes, once the permanent veneers are bonded. Modern bonding agents are incredibly strong. You should avoid biting directly into hard objects like ice or hard candy, just as you would with natural teeth." }
     ],
     relatedSlugs: ["general", "restorative", "orthodontics"]
@@ -235,7 +240,7 @@ export const servicesData: ServiceItem[] = [
     ],
     process: [
       { stepNumber: 1, title: "3D Digital Scan", description: "We take a highly accurate 3D model of your mouth in under 5 minutes using our state-of-the-art iTero intraoral scanner." },
-      { stepNumber: 2, title: "Custom Aligner Fabrication", description: "Dr. Rostova customizes your movement vectors, and a series of custom clear trays are manufactured specifically for your treatment." },
+      { stepNumber: 2, title: "Custom Aligner Fabrication", description: "Dr. Vigneshwar customizes your movement vectors, and a series of custom clear trays are manufactured specifically for your treatment." },
       { stepNumber: 3, title: "Wearing Your Aligners", description: "You will wear each aligner tray for 20-22 hours a day, switching to the next set in the sequence every 1 to 2 weeks." },
       { stepNumber: 4, title: "Retainer Preservation", description: "After alignment is complete, we provide custom clear retainers to prevent any shifting, keeping your new smile aligned forever." }
     ],
@@ -271,7 +276,7 @@ export const servicesData: ServiceItem[] = [
     faq: [
       { question: "At what age should a child have their very first dental visit?", answer: "The American Academy of Pediatric Dentistry recommends scheduling their first dental visit when their first tooth appears, or no later than their first birthday." },
       { question: "What is a dental sealant, and are they safe?", answer: "Yes, they are highly safe and effective. Sealants are ultra-thin protective coatings bonded to the chewing grooves of the back molars. They block plaque and bacteria, reducing cavities in kids by up to 80%." },
-      { question: "How can I prepare my child for their first visit at your office?", answer: "Talk about the visit positively. Avoid using scary words like 'needle', 'drill', or 'hurt'. Read a fun book about visiting the dentist, and assure them that Dr. Rostova is very friendly and gentle." }
+      { question: "How can I prepare my child for their first visit at your office?", answer: "Talk about the visit positively. Avoid using scary words like 'needle', 'drill', or 'hurt'. Read a fun book about visiting the dentist, and assure them that Dr. Vigneshwar is very friendly and gentle." }
     ],
     relatedSlugs: ["general", "orthodontics", "cosmetic"]
   }
@@ -283,15 +288,16 @@ export const servicesData: ServiceItem[] = [
 export const teamData: TeamMember[] = [
   {
     id: "t1",
-    name: "Dr. Elena Rostova",
+    name: "Dr. Vigneshwar",
     role: "Lead Dentist & Founder",
     type: "doctor",
-    photo: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=600&auto=format&fit=crop",
-    shortBio: "Combining top-tier clinical training with a passionate eye for artistic smile design, Dr. Rostova has spent over 15 years crafting luxury dental transformations.",
+    photo: clinicalHeritageDr,
+    imagePosition: "object-top",
+    shortBio: "Combining top-tier clinical training with a passionate eye for artistic smile design, Dr. Vigneshwar has spent over 15 years crafting luxury dental transformations.",
     fullBio: [
-      "Dr. Elena Rostova is the clinical visionary and lead artisan behind Aventura Dental Arts. Over her distinguished 15-year career, she has earned a international reputation for cosmetic dental transformations and complex restorative dentistry.",
-      "Dr. Rostova graduated with highest honors from the prestigious University of Miami and went on to complete her Doctor of Dental Surgery (DDS) degree at Columbia University. Believing that dentistry is the ultimate intersection of biological medicine and visual arts, she completed postgraduate clinical residencies focused exclusively on biomimetic ceramic engineering and facial aesthetic design.",
-      "At her boutique Aventura studio, she takes a highly patient-centered, slow-dentistry approach. By reserving generous daily appointments, she is able to focus exclusively on each patient, ensuring a calm experience, detailed diagnostic micro-matching, and clinical excellence."
+      "Dr. Vigneshwar is the clinical visionary and lead artisan behind Aventura Dental Arts. Over his distinguished 15-year career, he has earned a international reputation for cosmetic dental transformations and complex restorative dentistry.",
+      "Dr. Vigneshwar graduated with highest honors from the prestigious University of Miami and went on to complete his Doctor of Dental Surgery (DDS) degree at Columbia University. Believing that dentistry is the ultimate intersection of biological medicine and visual arts, he completed postgraduate clinical residencies focused exclusively on biomimetic ceramic engineering and facial aesthetic design.",
+      "At his boutique Aventura studio, he takes a highly patient-centered, slow-dentistry approach. By reserving generous daily appointments, he is able to focus exclusively on each patient, ensuring a calm experience, detailed diagnostic micro-matching, and clinical excellence."
     ],
     credentials: [
       "Doctor of Dental Surgery (DDS) — Columbia University",
@@ -313,7 +319,8 @@ export const teamData: TeamMember[] = [
     name: "Marcus Thorne, RDH",
     role: "Lead Periodontal Specialist",
     type: "hygienist",
-    photo: "https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&w=600&auto=format&fit=crop",
+    photo: leadPeriodontalSpecialist,
+    imagePosition: "object-top",
     shortBio: "A passionate educator in systemic oral health, Marcus specializes in comfortable, advanced guided biofilm therapy and gum health.",
     fullBio: [
       "Marcus Thorne is our highly regarded Lead Periodontal Hygienist. With over 8 years of specialized clinical experience, Marcus is a dedicated advocate for guided biofilm therapy and non-invasive periodontal rehabilitation.",
@@ -337,7 +344,8 @@ export const teamData: TeamMember[] = [
     name: "Victoria Sterling",
     role: "Patient Experience Director",
     type: "admin",
-    photo: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=600&auto=format&fit=crop",
+    photo: patientExperienceDirector,
+    imagePosition: "object-center",
     shortBio: "Ensuring your complete physical comfort and administrative ease, Victoria coordinates your visits, billing, and scheduling perfectly.",
     fullBio: [
       "Victoria Sterling is the welcoming heart of Aventura Dental Arts. As our Patient Experience Director, she ensures that every moment of your digital and in-office journey is characterized by complete comfort and administrative ease.",
@@ -434,7 +442,7 @@ export const blogPosts: BlogPost[] = [
     publishedAt: "May 12, 2026",
     category: "cosmetic",
     categoryLabel: "Cosmetic Dentistry",
-    excerpt: "Discover why standard ultra-white porcelain veneers look artificial, and how Dr. Rostova designs bespoke transformations based on natural translucency and facial geometry.",
+    excerpt: "Discover why standard ultra-white porcelain veneers look artificial, and how Dr. Vigneshwar designs bespoke transformations based on natural translucency and facial geometry.",
     readingTimeMinutes: 5,
     mainImage: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=1200&auto=format&fit=crop",
     authorId: "t1",
@@ -446,7 +454,7 @@ export const blogPosts: BlogPost[] = [
     ],
     body: [
       "In the search for the perfect smile, many patients fall into the trap of ordering veneers that are excessively white, completely flat, and devoid of details. The result is what dental professionals call a 'refrigerator' or 'chicklet' smile—an artificial, unconvincing row of white blocks that looks completely out of place against natural skin tones.",
-      "At Aventura Dental Arts, Dr. Elena Rostova approaches cosmetic transformation through a very different lens: restrained luxury. A premium porcelain veneer should never announce itself aggressively. Instead, it should quietly enhance your appearance by blending with your facial structure and organic dental anatomy.",
+      "At Aventura Dental Arts, Dr. Vigneshwar approaches cosmetic transformation through a very different lens: restrained luxury. A premium porcelain veneer should never announce itself aggressively. Instead, it should quietly enhance your appearance by blending with your facial structure and organic dental anatomy.",
       "When we design porcelain veneers, we focus intensely on three key structural qualities: surface micro-texture, gradient shade transitions, and incisal translucency. Natural teeth are not flat white; they have micro-grooves that scatter light, and their edges are translucent where enamel wraps over dentin. By layering different porcelain minerals, we create veneers that interact with light in exactly the same way as natural teeth.",
       "Furthermore, every smile must be customized to your specific facial geometry. We analyze the curve of your lower lip, the angle of your pupils, and the vertical proportions of your face to align the margins of each veneer perfectly. This bespoke process ensures your final transformation looks like you were born with a structurally flawless smile."
     ]

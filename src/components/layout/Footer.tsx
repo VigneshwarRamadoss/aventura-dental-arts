@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import newLogo from './new-logo.svg';
 
 export default function Footer() {
   return (
@@ -7,13 +8,9 @@ export default function Footer() {
         
         {/* Col 1 */}
         <div className="flex flex-col items-start">
-          <Link to="/" className="font-serif text-2xl tracking-wide flex items-center mb-4">
-             <svg className="h-6 w-6 mr-2 text-bronze" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
-               <path d="M12 8v4"/>
-               <path d="M12 16h.01"/>
-            </svg>
-            AVENTURA
+          <Link to="/" className="font-serif text-2xl tracking-wide flex items-center mb-4 group text-charcoal hover:text-bronze transition-colors">
+             <img src={newLogo} alt="Aventura Dental Arts Logo" className="h-8 w-8 mr-2 object-contain transition-transform duration-700 group-hover:rotate-[360deg]" />
+             AVENTURA
           </Link>
           <p className="font-sans text-sm text-dark-gray max-w-xs mb-6">
             Restrained luxury in advanced dental care. Creating perfect smiles in a serene, premium environment.

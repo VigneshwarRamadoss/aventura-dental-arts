@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import * as Icons from 'lucide-react';
 import { ArrowRight, Phone } from 'lucide-react';
+import serviceBg from './hero_section/service-bg.png';
 
 export default function Services() {
   const technologies = [
@@ -28,26 +29,56 @@ export default function Services() {
     <div className="bg-charcoal text-light-beige">
       
       {/* 1. HERO SECTION */}
-      <section className="relative pt-44 pb-20 px-6 md:px-12 text-center border-b border-dark-gray/25">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_70%_at_50%_-15%,rgba(179,140,97,0.15),transparent)] z-0" />
-        <div className="max-w-4xl mx-auto relative z-10">
-          <motion.span 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-sm font-sans tracking-[0.2em] text-bronze uppercase block mb-6"
+      <section className="relative pt-44 pb-24 px-6 md:px-12 text-center border-b border-dark-gray/25 overflow-hidden">
+        {/* State-of-the-art Clinical Background with Radial Glow and Gradients */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src={serviceBg} 
+            alt="Clinical Scope Background" 
+            className="w-full h-full object-cover object-center opacity-45 select-none pointer-events-none"
+            style={{ filter: 'brightness(0.32) contrast(1.15)' }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#0E0F15]/40 via-charcoal/70 to-charcoal z-10" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-bronze/10 rounded-full blur-[140px] pointer-events-none z-[15]" />
+        </div>
+
+        <div className="max-w-4xl mx-auto relative z-20">
+          {/* Glassmorphic Section Badge with pulse and shimmer */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-near-black/60 border border-bronze/35 backdrop-blur-md mb-6 shadow-[0_4px_30px_rgba(179,140,97,0.12)] relative overflow-hidden group"
           >
-            Clinical Scope
-          </motion.span>
+            <div className="absolute inset-0 w-[40px] h-full bg-gradient-to-r from-transparent via-white/20 to-transparent animate-shimmer pointer-events-none" />
+            <span className="w-2 h-2 rounded-full bg-bronze animate-pulse" />
+            <span className="font-sans text-xs tracking-[0.2em] text-bronze uppercase font-semibold">
+              Clinical Scope
+            </span>
+          </motion.div>
+
+          {/* Premium swash title */}
           <motion.h1 
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            className="font-serif text-5xl md:text-7xl lg:text-[83px] leading-tight mb-6"
+            transition={{ duration: 0.7, ease: "easeOut" }}
+            className="font-serif italic text-5xl md:text-7xl lg:text-[88px] leading-[0.95] tracking-tight text-light-beige mb-6 select-none"
           >
-            Comprehensive Dentistry
+            Comprehensive <span className="text-bronze font-serif italic font-normal">Dentistry</span>
           </motion.h1>
-          <div className="w-16 h-px bg-bronze mx-auto mb-8" />
-          <p className="font-sans text-light-beige/70 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
+
+          {/* Symmetrical luxury star-diamond divider */}
+          <motion.div 
+            initial={{ scaleX: 0, opacity: 0 }}
+            animate={{ scaleX: 1, opacity: 1 }}
+            transition={{ delay: 0.3, duration: 0.5 }}
+            className="flex items-center justify-center gap-4 w-full max-w-xs mx-auto mb-8"
+          >
+            <div className="h-[1px] bg-gradient-to-r from-transparent to-bronze/50 flex-1" />
+            <span className="text-bronze text-base">✦</span>
+            <div className="h-[1px] bg-gradient-to-l from-transparent to-bronze/50 flex-1" />
+          </motion.div>
+
+          <p className="font-sans text-light-beige/85 text-base md:text-lg max-w-2xl mx-auto leading-relaxed">
             Delivering advanced dental treatments in a sensory-calming, premium environment. We customize every detail of your care, from shade chemistry to local sedation.
           </p>
         </div>
@@ -67,7 +98,7 @@ export default function Services() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1, duration: 0.5 }}
-                className="group flex flex-col justify-between bg-near-black/40 border border-dark-gray/30 p-8 hover:border-bronze hover:bg-near-black/75 transition-all duration-300"
+                className="group flex flex-col justify-between bg-[#181A22]/75 border border-dark-gray/20 hover:border-bronze/60 hover:shadow-[0_8px_30px_rgba(179,140,97,0.06)] transition-all duration-300 p-8 backdrop-blur-sm relative overflow-hidden"
               >
                 <div className="space-y-6">
                   {/* Icon & Category Tag */}

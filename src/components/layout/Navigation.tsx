@@ -4,6 +4,7 @@ import { Menu, X } from 'lucide-react';
 import { cn } from '../../lib/utils';
 import { motion, AnimatePresence } from 'motion/react';
 import Button from '../ui/Button';
+import newLogo from './new-logo.svg';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = React.useState(false);
@@ -40,12 +41,8 @@ export default function Navigation() {
     >
       <div className="mx-auto flex h-full max-w-site items-center justify-between px-6 lg:px-12">
         {/* Logo */}
-        <Link to="/" className="text-light-beige font-serif text-2xl tracking-wide flex items-center">
-          <svg className="h-8 w-8 mr-2 text-bronze" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
-             <path d="M12 8v4"/>
-             <path d="M12 16h.01"/>
-          </svg>
+        <Link to="/" className="text-light-beige font-serif text-2xl tracking-wide flex items-center group">
+          <img src={newLogo} alt="Aventura Dental Arts Logo" className="h-10 w-10 mr-3 object-contain transition-transform duration-700 group-hover:rotate-[360deg]" />
           AVENTURA <span className="font-sans text-xs ml-2 tracking-[0.2em] uppercase mt-1 opacity-80">Dental Arts</span>
         </Link>
 

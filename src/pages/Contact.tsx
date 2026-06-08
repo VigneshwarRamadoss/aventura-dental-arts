@@ -72,7 +72,6 @@ export default function Contact() {
     }
 
     // Phone digits check
-    const phoneRegex = /^\d{10}$/;
     const digitsOnly = form.phone.replace(/\D/g, '');
     if (!form.phone.trim()) {
       tempErrors.phone = "Phone number is required.";
@@ -91,11 +90,12 @@ export default function Contact() {
       tempErrors.preferredDate = "Please choose a preferred date.";
       isValid = false;
     } else {
-      // Check if selected date is in the past
-      const selected = new Date(form.preferredDate);
+      // Check if selected date is in the past (using timezone-safe local date parsing)
+      const [year, month, day] = form.preferredDate.split('-').map(Number);
+      const selectedDate = new Date(year, month - 1, day);
       const today = new Date();
       today.setHours(0, 0, 0, 0);
-      if (selected < today) {
+      if (selectedDate < today) {
         tempErrors.preferredDate = "Preferred date cannot be in the past.";
         isValid = false;
       }
@@ -136,7 +136,14 @@ export default function Contact() {
   // Submit form handler
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validateForm()) return;
+    if (!validateForm()) {
+      // Smoothly scroll the form header into view to show validation errors clearly
+      const formElement = document.querySelector('form');
+      if (formElement) {
+        formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      return;
+    }
 
     setIsSubmitting(true);
 
@@ -252,7 +259,7 @@ export default function Contact() {
             {/* Interactive Google Map with Grayscale custom styling to fit luxury dark mode */}
             <div className="relative aspect-video w-full overflow-hidden border border-dark-gray/30 bg-[#20232B] select-none">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1m4!2sAventura,+FL!5m2!1s!2s" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14349.566270725515!2d-80.1424785461142!3d25.952569269558963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9ace63d41f3e7%3A0xc304be36181fcd7b!2sAventura%2C%20FL!5e0!3m2!1sen!2sus!4v1716000000000!5m2!1sen!2sus" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0, filter: "invert(90%) hue-rotate(180deg) grayscale(100%) contrast(90%)" }} 

@@ -3,6 +3,7 @@ import { teamData, clinicSettings } from '../lib/mockData';
 import Button from '../components/ui/Button';
 import { Link } from 'react-router-dom';
 import { Award, ShieldCheck, CheckCircle2, Phone, Calendar } from 'lucide-react';
+import clinicalHeritageDr from './hero_section/clinical-heritage-dr.png';
 
 export default function About() {
   const coreValues = [
@@ -90,10 +91,10 @@ export default function About() {
             
             <div className="font-sans text-light-beige/75 space-y-6 leading-relaxed">
               <p>
-                Led by Dr. Elena Rostova, our approach centers on the natural beauty of dentistry. We stand against standard, overly-white artificial makeovers. We focus intensely on light translucency, micro-texture, and facial geometry.
+                Led by Dr. Vigneshwar, our approach centers on the natural beauty of dentistry. We stand against standard, overly-white artificial makeovers. We focus intensely on light translucency, micro-texture, and facial geometry.
               </p>
               <p>
-                Dr. Rostova holds a Doctor of Dental Surgery degree from Columbia University and has completed extensive training in biomimetic ceramics. This allows us to structurally fuse ceramic work to natural enamel down to the micron.
+                Dr. Vigneshwar holds a Doctor of Dental Surgery degree from Columbia University and has completed extensive training in biomimetic ceramics. This allows us to structurally fuse ceramic work to natural enamel down to the micron.
               </p>
               <p>
                 Our Aventura studio is built as a state-of-the-art biological clinic, designed to minimize chemical smells, sound vibration, and anxiety. Here, your wellness always takes priority.
@@ -119,15 +120,15 @@ export default function About() {
             transition={{ duration: 0.6 }}
             className="relative"
           >
-            <div className="aspect-[4/5] overflow-hidden bg-near-black border border-dark-gray/30 group">
+            <div className="w-full aspect-[4/5] overflow-hidden bg-near-black border border-dark-gray/30 group">
               <img 
-                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=1200&auto=format&fit=crop" 
-                alt="Dr. Elena Rostova in her elements" 
-                className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                src={clinicalHeritageDr} 
+                alt="Dr. Vigneshwar in his elements" 
+                className="w-full h-full object-cover object-top grayscale group-hover:grayscale-0 transition-all duration-700"
               />
             </div>
             <div className="absolute -bottom-6 -left-6 bg-near-black border border-dark-gray p-6 max-w-xs shadow-card">
-              <p className="font-serif text-lg text-light-beige">Dr. Elena Rostova, DDS</p>
+              <p className="font-serif text-lg text-light-beige">Dr. Vigneshwar, DDS</p>
               <p className="font-sans text-xs text-bronze uppercase tracking-widest mt-1">Practice Founder</p>
             </div>
           </motion.div>
@@ -182,11 +183,11 @@ export default function About() {
               transition={{ delay: idx * 0.15 }}
               className="bg-[#20232B] border border-dark-gray/30 flex flex-col group hover:border-bronze/50 transition-colors"
             >
-              <div className="aspect-[4/3] w-full overflow-hidden bg-charcoal">
+              <div className="aspect-[3/4] w-full overflow-hidden bg-charcoal">
                 <img 
                   src={member.photo} 
                   alt={member.name} 
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                  className={`w-full h-full object-cover ${member.imagePosition || 'object-center'} grayscale group-hover:grayscale-0 transition-all duration-500`}
                 />
               </div>
               <div className="p-8 flex flex-col flex-1">

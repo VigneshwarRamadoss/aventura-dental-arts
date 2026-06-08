@@ -305,7 +305,7 @@ export default function Blog() {
                       <span className="text-xs font-sans text-bronze uppercase tracking-widest font-semibold">Diagnostic Consultation</span>
                       <h4 className="font-serif text-2xl text-light-beige leading-tight">Interested in custom cosmetic veneers or clinical wellness?</h4>
                       <p className="font-sans text-xs text-[#DAD5D3]/75 leading-relaxed">
-                        Book a detailed visual smile diagnostic with Dr. Elena Rostova today. Complete mapping, 3D intraoral diagnostics, and individual treatment planning.
+                        Book a detailed visual smile diagnostic with Dr. Vigneshwar today. Complete mapping, 3D intraoral diagnostics, and individual treatment planning.
                       </p>
                       <Button as={Link} to="/contact" onClick={() => setActivePostSlug(null)} className="mt-2 text-xs">
                         Book Smile Consultation
@@ -339,7 +339,7 @@ export default function Blog() {
               {/* Bottom bar */}
               <div className="bg-charcoal px-6 md:px-16 py-6 border-t border-dark-gray/10 text-center">
                 <p className="font-sans text-xs text-[#DAD5D3]/50">
-                  © {new Date().getFullYear()} Aventura Dental Arts. All clinical publications are reviewed by Dr. Elena Rostova.
+                  © {new Date().getFullYear()} Aventura Dental Arts. All clinical publications are reviewed by Dr. Vigneshwar.
                 </p>
               </div>
 

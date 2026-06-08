@@ -26,7 +26,7 @@ export default function PatientResources() {
   const policyFaqs = [
     {
       q: "What should I expect during my very first visit?",
-      a: "Your first visit is dedicated to comprehensive diagnostics and relationship-building. It includes low-radiation digital X-rays, a 3D intraoral scan, an oral cancer screening, and a detailed clinical consultation with Dr. Elena Rostova. We review your goals without any pressure or rush."
+      a: "Your first visit is dedicated to comprehensive diagnostics and relationship-building. It includes low-radiation digital X-rays, a 3D intraoral scan, an oral cancer screening, and a detailed clinical consultation with Dr. Vigneshwar. We review your goals without any pressure or rush."
     },
     {
       q: "Which insurance providers do you accept?",
@@ -70,7 +70,7 @@ export default function PatientResources() {
     },
     {
       q: "Do you offer pediatric dental services for children?",
-      a: "Yes. We treat children of all ages starting from their first tooth. Dr. Rostova utilizes highly gentle, kid-friendly education, positive reinforcement, and fun demonstrations to establish early positive dental associations."
+      a: "Yes. We treat children of all ages starting from their first tooth. Dr. Vigneshwar utilizes highly gentle, kid-friendly education, positive reinforcement, and fun demonstrations to establish early positive dental associations."
     },
     {
       q: "What is Swiss Guided Biofilm Therapy (GBT)?",
@@ -78,7 +78,7 @@ export default function PatientResources() {
     },
     {
       q: "Can I complete my new patient registration forms online before arriving?",
-      a: "Absolutely. We highly recommend downloading the registration PDFs on this page, filling them out digitally or printing them, and emailing them to us before your visit. This minimizes check-in paperwork and maximizes your face-to-face time with Dr. Rostova."
+      a: "Absolutely. We highly recommend downloading the registration PDFs on this page, filling them out digitally or printing them, and emailing them to us before your visit. This minimizes check-in paperwork and maximizes your face-to-face time with Dr. Vigneshwar."
     },
     {
       q: "Is patient parking available at your Aventura studio?",
@@ -191,11 +191,11 @@ export default function PatientResources() {
             
             <div className="pt-6 space-y-2">
               <div className="flex items-center gap-3 text-xs font-sans text-light-beige/70">
-                <ShieldCheck className="h-4.5 w-4.5 text-bronze" />
+                <ShieldCheck className="h-[18px] w-[18px] text-bronze" />
                 <span>Fully Secure HIPAA Data Systems</span>
               </div>
               <div className="flex items-center gap-3 text-xs font-sans text-light-beige/70">
-                <HeartHandshake className="h-4.5 w-4.5 text-bronze" />
+                <HeartHandshake className="h-[18px] w-[18px] text-bronze" />
                 <span>Slow Dentistry Practice Standards</span>
               </div>
             </div>
