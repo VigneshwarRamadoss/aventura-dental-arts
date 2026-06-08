@@ -32,7 +32,7 @@ export default function About() {
   const officePhotos = [
     { url: "https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop", caption: "Advanced Operatory" },
     { url: "https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop", caption: "Premium Patient Lounge" },
-    { url: "https://images.unsplash.com/photo-1579684389782-64d84b5e905d?q=80&w=800&auto=format&fit=crop", caption: "Aesthetic Treatment Suite" }
+    { url: "https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=800&auto=format&fit=crop", caption: "Aesthetic Treatment Suite" }
   ];
 
   return (
