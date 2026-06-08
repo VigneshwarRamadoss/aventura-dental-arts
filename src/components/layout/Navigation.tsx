@@ -42,7 +42,7 @@ export default function Navigation() {
       <div className="mx-auto flex h-full max-w-site items-center justify-between px-6 lg:px-12">
         {/* Logo */}
         <Link to="/" className="text-light-beige font-serif text-2xl tracking-wide flex items-center group">
-          <img src={newLogo} alt="Aventura Dental Arts Logo" className="h-10 w-10 mr-3 object-contain transition-transform duration-[800ms] ease-out group-hover:rotate-[360deg] filter-bronze" />
+          <img src={newLogo} alt="Aventura Dental Arts Logo" className="h-10 w-10 mr-3 object-contain transition-transform duration-[800ms] ease-out group-hover:rotate-[360deg]" />
           AVENTURA <span className="font-sans text-[10px] ml-2 tracking-[0.3em] uppercase mt-1.5 opacity-70">Dental Arts</span>
         </Link>
 

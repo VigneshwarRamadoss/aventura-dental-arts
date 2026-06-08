@@ -31,10 +31,6 @@
   max-width: 1440px;
 }
 
-@utility filter-bronze {
-  filter: brightness(0) saturate(100%) invert(63%) sepia(37%) saturate(464%) hue-rotate(346deg) brightness(89%) contrast(92%);
-}
-
 @layer base {
   body {
     @apply bg-charcoal text-light-beige font-sans antialiased;
