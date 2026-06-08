@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Col 1 */}
         <div className="flex flex-col items-start">
           <Link to="/" className="font-serif text-2xl tracking-wide flex items-center mb-4 group text-charcoal hover:text-bronze transition-colors">
-             <img src={newLogo} alt="Aventura Dental Arts Logo" className="h-8 w-8 mr-2 object-contain transition-transform duration-700 group-hover:rotate-[360deg]" />
+             <img src={newLogo} alt="Aventura Dental Arts Logo" className="h-8 w-8 mr-2 object-contain transition-transform duration-[800ms] ease-out group-hover:rotate-[360deg] filter-bronze" />
              AVENTURA
           </Link>
           <p className="font-sans text-sm text-dark-gray max-w-xs mb-6">

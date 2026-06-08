@@ -35,15 +35,15 @@ export default function Navigation() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'bg-charcoal/95 backdrop-blur-md h-[80px]' : 'bg-transparent h-[100px]'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out',
+        isScrolled ? 'bg-charcoal/90 backdrop-blur-lg h-[80px] border-b border-white/5 shadow-sm' : 'bg-transparent h-[100px]'
       )}
     >
       <div className="mx-auto flex h-full max-w-site items-center justify-between px-6 lg:px-12">
         {/* Logo */}
         <Link to="/" className="text-light-beige font-serif text-2xl tracking-wide flex items-center group">
-          <img src={newLogo} alt="Aventura Dental Arts Logo" className="h-10 w-10 mr-3 object-contain transition-transform duration-700 group-hover:rotate-[360deg]" />
-          AVENTURA <span className="font-sans text-xs ml-2 tracking-[0.2em] uppercase mt-1 opacity-80">Dental Arts</span>
+          <img src={newLogo} alt="Aventura Dental Arts Logo" className="h-10 w-10 mr-3 object-contain transition-transform duration-[800ms] ease-out group-hover:rotate-[360deg] filter-bronze" />
+          AVENTURA <span className="font-sans text-[10px] ml-2 tracking-[0.3em] uppercase mt-1.5 opacity-70">Dental Arts</span>
         </Link>
 
         {/* Desktop Nav */}
