@@ -236,7 +236,7 @@ export default function About() {
                 <img 
                   src={photo.url} 
                   alt={photo.caption} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 grayscale hover:grayscale-0"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700 grayscale group-hover:grayscale-0"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal to-transparent opacity-60 group-hover:opacity-40 transition-opacity" />
                 <span className="absolute bottom-4 left-6 font-serif text-lg text-light-beige">{photo.caption}</span>
