@@ -3,7 +3,7 @@ import newLogo from './new-logo.svg';
 
 export default function Footer() {
   return (
-    <footer className="bg-off-white text-charcoal pt-[72px] pb-6 px-6 lg:px-12 border-t border-bronze">
+    <footer className="relative z-30 bg-[#DAD5D3] text-charcoal pt-[72px] pb-6 px-6 lg:px-12 border-t border-bronze">
       <div className="max-w-site mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
         
         {/* Col 1 */}
