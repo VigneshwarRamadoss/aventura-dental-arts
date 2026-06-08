@@ -36,7 +36,7 @@ export default function Navigation() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-500 ease-out',
-        isScrolled ? 'bg-charcoal/90 backdrop-blur-lg h-[80px] border-b border-white/5 shadow-sm' : 'bg-transparent h-[100px]'
+        isScrolled ? 'bg-charcoal/90 backdrop-blur-lg h-[80px] shadow-sm' : 'bg-transparent h-[100px]'
       )}
     >
       <div className="mx-auto flex h-full max-w-site items-center justify-between px-6 lg:px-12">
