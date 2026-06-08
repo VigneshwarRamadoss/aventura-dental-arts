@@ -91,7 +91,7 @@ export default function Blog() {
               <img 
                 src={featuredPost.mainImage} 
                 alt={featuredPost.title} 
-                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                className="w-full h-full object-cover filter-gold-tint hover:filter-none transition-all duration-700"
               />
             </div>
 
@@ -172,7 +172,7 @@ export default function Blog() {
                     <img 
                       src={post.mainImage} 
                       alt={post.title} 
-                      className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
+                      className="w-full h-full object-cover filter-gold-tint group-hover:filter-none transition-all duration-500"
                     />
                   </div>
                   
@@ -211,9 +211,9 @@ export default function Blog() {
       {/* 5. IMMERSIVE READING MODAL OVERLAY */}
       <AnimatePresence>
         {activePost && (
-          <div className="fixed inset-0 z-50 flex justify-end bg-charcoal/95 backdrop-blur-md">
+          <div className="fixed inset-0 z-50 flex bg-charcoal">
             
-            {/* Scroll Progress Bar at the top of the sidebar sheet */}
+            {/* Scroll Progress Bar at the top of the screen */}
             <div className="fixed top-0 left-0 right-0 h-1 bg-charcoal border-b border-dark-gray/20 z-50">
               <div 
                 className="h-full bg-bronze transition-all duration-100 ease-out" 
@@ -222,17 +222,17 @@ export default function Blog() {
             </div>
 
             <motion.div
-              initial={{ x: '100%' }}
-              animate={{ x: 0 }}
-              exit={{ x: '100%' }}
-              transition={{ type: 'tween', duration: 0.35, ease: 'easeOut' }}
-              className="w-full lg:max-w-4xl bg-near-black border-l border-dark-gray/40 h-full overflow-y-auto flex flex-col pt-6"
+              initial={{ y: '100%', opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              exit={{ y: '100%', opacity: 0 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="w-full h-full overflow-y-auto flex flex-col pt-0"
               ref={articleContainerRef}
               onScroll={handleArticleScroll}
             >
               
               {/* Sticky Top Header bar */}
-              <div className="sticky top-0 bg-near-black/90 backdrop-blur-md border-b border-dark-gray/10 px-6 md:px-12 py-4 flex items-center justify-between z-40">
+              <div className="sticky top-0 bg-charcoal/90 backdrop-blur-md border-b border-dark-gray/10 px-6 md:px-12 py-4 flex items-center justify-between z-40 max-w-5xl mx-auto w-full">
                 <button 
                   onClick={() => setActivePostSlug(null)}
                   className="inline-flex items-center gap-2 font-sans text-xs text-bronze hover:text-light-beige transition-colors"
@@ -249,7 +249,7 @@ export default function Blog() {
               </div>
 
               {/* Scrollable Article Content */}
-              <article className="flex-1 px-6 md:px-16 py-12 space-y-12">
+              <article className="flex-1 px-6 md:px-16 py-12 space-y-12 max-w-5xl mx-auto w-full">
                 
                 {/* Hero Header */}
                 <div className="space-y-6">
@@ -263,7 +263,7 @@ export default function Blog() {
                     </span>
                   </div>
 
-                  <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl text-light-beige leading-tight">
+                  <h1 className="font-serif text-4xl md:text-5xl lg:text-7xl text-light-beige leading-tight">
                     {activePost.title}
                   </h1>
                   
@@ -272,7 +272,7 @@ export default function Blog() {
 
                 {/* Cover Image */}
                 <div className="aspect-video w-full overflow-hidden border border-dark-gray/30 bg-charcoal">
-                  <img src={activePost.mainImage} alt={activePost.title} className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" />
+                  <img src={activePost.mainImage} alt={activePost.title} className="w-full h-full object-cover filter-gold-tint hover:filter-none transition-all duration-700" />
                 </div>
 
                 {/* Grid layout for Article Body & Sidebar Table of Contents */}
@@ -337,7 +337,7 @@ export default function Blog() {
               </article>
 
               {/* Bottom bar */}
-              <div className="bg-charcoal px-6 md:px-16 py-6 border-t border-dark-gray/10 text-center">
+              <div className="bg-charcoal px-6 md:px-16 py-6 border-t border-dark-gray/10 text-center max-w-5xl mx-auto w-full">
                 <p className="font-sans text-xs text-[#DAD5D3]/50">
                   © {new Date().getFullYear()} Aventura Dental Arts. All clinical publications are reviewed by Dr. Vigneshwar.
                 </p>

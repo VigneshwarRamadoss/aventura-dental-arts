@@ -31,6 +31,10 @@
   max-width: 1440px;
 }
 
+@utility filter-gold-tint {
+  filter: sepia(0.6) hue-rotate(-15deg) saturate(1.2) brightness(0.9);
+}
+
 @layer base {
   body {
     @apply bg-charcoal text-light-beige font-sans antialiased;
