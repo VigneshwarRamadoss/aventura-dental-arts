@@ -62,7 +62,7 @@ export default function Footer() {
       </div>
 
       <div className="max-w-site mx-auto pt-6 border-t border-dark-gray/20 flex flex-col md:flex-row justify-between items-center text-xs text-dark-gray font-sans gap-4">
-        <p>&copy; {new Date().getFullYear()} Aventura Dental Arts. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} "The Dot" company. All rights reserved.</p>
         <div className="flex gap-4">
           <Link to="/privacy-policy" className="hover:text-charcoal">Privacy Policy</Link>
           <Link to="/terms-of-service" className="hover:text-charcoal">Terms of Service</Link>

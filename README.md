@@ -62,4 +62,4 @@ This will generate a `dist` directory containing all the minified, production-re
 
 ## 📄 License
 
-All rights reserved. This project is proprietary and intended solely for Aventura Dental Arts.
+All rights reserved. This project is proprietary and all website rights belong to "The Dot" company.
